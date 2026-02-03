@@ -70,7 +70,7 @@ export default function SessionStats({ isOpen, onClose, stats }) {
               
               <div className="relative z-10 flex items-center justify-between">
                 <div>
-                  <h2 className="text-3xl font-bold text-white mb-1">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-1">
                     🎉 Session Complete!
                   </h2>
                   <p className="text-white/90">
@@ -100,7 +100,7 @@ export default function SessionStats({ isOpen, onClose, stats }) {
             {/* Content */}
             <div className="p-6 space-y-6 max-h-[70vh] overflow-y-auto">
               {/* Session Overview */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                 <StatCard
                   icon={<Clock />}
                   label="Duration"
@@ -165,7 +165,7 @@ export default function SessionStats({ isOpen, onClose, stats }) {
                     <Zap className="w-5 h-5 text-yellow-400" />
                     Peak Vibe Moment
                   </h3>
-                  <div className="flex items-center gap-4">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                     <div className="text-6xl">{stats.peakVibe.emoji}</div>
                     <div>
                       <p className="text-2xl text-white font-bold">
@@ -191,7 +191,7 @@ export default function SessionStats({ isOpen, onClose, stats }) {
                     <Trophy className="w-5 h-5 text-yellow-400" />
                     Mood Influencer
                   </h3>
-                  <div className="flex items-center gap-4">
+                  <div className="flex flex-col sm:flex-row sm:flex-col sm:flex-row sm:items-center gap-4">
                     <div className="text-5xl">👑</div>
                     <div>
                       <p className="text-2xl text-white font-bold">

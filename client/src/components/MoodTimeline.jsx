@@ -50,8 +50,8 @@ export default function MoodTimeline({ moodHistory, userName }) {
   return (
     <div className="space-y-4">
       {/* Stats Header */}
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div className="flex flex-wrap items-center gap-4">
           <div className="px-4 py-2 rounded-xl bg-primary-500/10 border border-primary-400/20">
             <span className="text-orange-200 text-sm">
               <span className="font-bold text-white">{moodChanges}</span> mood changes
@@ -68,7 +68,7 @@ export default function MoodTimeline({ moodHistory, userName }) {
         
         <button
           onClick={handleExport}
-          className="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white transition-all flex items-center gap-2"
+          className="w-full sm:w-auto px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white transition-all flex items-center justify-center gap-2"
         >
           <Download className="w-4 h-4" />
           <span className="text-sm">Export</span>

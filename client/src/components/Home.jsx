@@ -29,7 +29,7 @@ export default function Home() {
           >
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-accent-500 blur-2xl opacity-50"></div>
-              <h1 className="relative text-7xl md:text-8xl font-black bg-gradient-to-r from-orange-300 via-red-300 to-orange-300 bg-clip-text text-transparent">
+              <h1 className="relative text-5xl sm:text-6xl md:text-8xl font-black bg-gradient-to-r from-orange-300 via-red-300 to-orange-300 bg-clip-text text-transparent">
                 MOOZINGA
               </h1>
             </div>

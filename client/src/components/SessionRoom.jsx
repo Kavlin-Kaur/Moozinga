@@ -245,7 +245,7 @@ export default function SessionRoom() {
         >
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             {/* Session Info */}
-            <div className="flex items-center gap-4 flex-wrap">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-2 sm:gap-4">
               <SessionCode code={sessionCode} />
               
               <button
@@ -299,7 +299,7 @@ export default function SessionRoom() {
             {/* Leave Button */}
             <button
               onClick={handleLeave}
-              className="px-6 py-3 rounded-xl bg-accent-500/20 backdrop-blur-sm border border-accent-400/30 text-accent-300 hover:bg-accent-500/30 transition-all flex items-center gap-2 justify-center md:justify-start"
+              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-accent-500/20 backdrop-blur-sm border border-accent-400/30 text-accent-300 hover:bg-accent-500/30 transition-all flex items-center justify-center gap-2"
             >
               <LogOut className="w-5 h-5" />
               Leave Session
@@ -313,10 +313,10 @@ export default function SessionRoom() {
               animate={{ opacity: 1, scale: 1 }}
               className="mt-6 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10"
             >
-              <div className="flex items-center gap-4">
-                <span className="text-5xl">{vibeEmoji}</span>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                <span className="text-4xl sm:text-5xl">{vibeEmoji}</span>
                 <div className="flex-1">
-                  <h3 className="text-white text-lg font-bold mb-2">Overall Vibe</h3>
+                  <h3 className="text-base sm:text-lg font-bold text-white mb-2">Overall Vibe</h3>
                   <div className="flex flex-wrap gap-2">
                     {Object.entries(sessionData.vibe.breakdown).map(([mood, percentage]) => {
                       const moodData = MOODS.find(m => m.id === mood);

@@ -61,7 +61,7 @@ export default function CreateSession() {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         onClick={() => navigate('home')}
-        className="absolute top-8 left-8 p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all"
+        className="absolute top-4 left-4 sm:top-8 sm:left-8 p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all"
       >
         <ArrowLeft className="w-5 h-5" />
       </motion.button>
@@ -72,7 +72,7 @@ export default function CreateSession() {
         className="max-w-md w-full"
       >
         {/* Glass card */}
-        <div className="relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 p-8 shadow-2xl">
+        <div className="relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 p-6 sm:p-8 shadow-2xl">
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-accent-500/10"></div>
 
@@ -82,7 +82,7 @@ export default function CreateSession() {
               <Sparkles className="w-12 h-12 text-orange-300" />
             </div>
 
-            <h2 className="text-3xl font-bold text-white text-center mb-2">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-2">
               Create Session
             </h2>
             <p className="text-orange-200 text-center mb-8">
@@ -112,7 +112,7 @@ export default function CreateSession() {
               <button
                 type="submit"
                 disabled={loading || !name.trim()}
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 text-white font-bold text-lg hover:from-primary-600 hover:to-accent-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/50"
+                className="w-full py-3 sm:py-4 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 text-white font-bold text-base sm:text-lg hover:from-primary-600 hover:to-accent-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/50"
               >
                 {loading ? (
                   <>

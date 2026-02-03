@@ -4,7 +4,7 @@ import { REACTIONS } from '../utils/constants';
 
 export default function ReactionToast({ reactions, onDismiss }) {
   return (
-    <div className="fixed top-4 right-4 z-50 space-y-2 pointer-events-none">
+    <div className="fixed top-4 right-2 left-2 sm:right-4 sm:left-auto z-50 space-y-2 pointer-events-none">
       <AnimatePresence>
         {reactions.map((reaction) => {
           const reactionData = REACTIONS.find(r => r.id === reaction.type);
@@ -22,7 +22,7 @@ export default function ReactionToast({ reactions, onDismiss }) {
               }}
               className="pointer-events-auto"
             >
-              <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 backdrop-blur-md border border-white/20 shadow-2xl min-w-[280px]">
+              <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 backdrop-blur-md border border-white/20 shadow-2xl w-full sm:w-auto sm:min-w-[280px] max-w-sm">
                 <span className="text-3xl">{reactionData?.emoji}</span>
                 <div className="flex-1">
                   <p className="text-white font-semibold">

@@ -66,7 +66,7 @@ export default function QRCodeModal({ sessionCode, isOpen, onClose }) {
           transition={{ type: 'spring', stiffness: 300, damping: 25 }}
           className="relative max-w-md w-full"
         >
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary-500/10 to-accent-500/10 backdrop-blur-md border-2 border-primary-500/40 p-8 shadow-2xl shadow-primary-500/20">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary-500/10 to-accent-500/10 backdrop-blur-md border-2 border-primary-500/40 p-6 sm:p-8 shadow-2xl shadow-primary-500/20">
             {/* Glow effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-500/20 blur-2xl opacity-50"></div>
 
@@ -84,7 +84,7 @@ export default function QRCodeModal({ sessionCode, isOpen, onClose }) {
                 <QrCodeIcon className="w-10 h-10 text-primary-300" />
               </div>
 
-              <h2 className="text-3xl font-bold text-white mb-2">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
                 Scan to Join
               </h2>
               <p className="text-orange-200 mb-6">
@@ -94,7 +94,7 @@ export default function QRCodeModal({ sessionCode, isOpen, onClose }) {
               {/* QR Code Display */}
               <div className="bg-white rounded-2xl p-6 mb-6 inline-block shadow-xl">
                 {loading ? (
-                  <div className="w-[300px] h-[300px] flex items-center justify-center">
+                  <div className="w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] flex items-center justify-center">
                     <div className="animate-spin rounded-full h-12 w-12 border-4 border-primary-500 border-t-transparent"></div>
                   </div>
                 ) : (
@@ -103,7 +103,7 @@ export default function QRCodeModal({ sessionCode, isOpen, onClose }) {
                     animate={{ opacity: 1, scale: 1 }}
                     src={qrDataUrl}
                     alt="Session QR Code"
-                    className="w-[300px] h-[300px]"
+                    className="w-[220px] h-[220px] sm:w-[300px] sm:h-[300px]"
                   />
                 )}
 
