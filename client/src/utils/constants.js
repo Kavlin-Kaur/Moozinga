@@ -44,8 +44,8 @@ export const REACTIONS = [
   { id: 'encourage', emoji: '💪', label: 'You got this!' }
 ];
 
-export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-export const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'http://localhost:3001';
+export const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://moozinga.fly.dev';
+export const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'https://moozinga.fly.dev';
 
 export const SESSION_EXPIRY_HOURS = 24;
 export const MAX_SESSION_USERS = 50;
